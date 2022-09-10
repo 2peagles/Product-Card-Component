@@ -2,7 +2,7 @@
 body{
     margin:0;
     padding:0;
-    height:100vh;
+    max-height:100vh;
     width:100vw;
     display: flex;
     align-items: center;
@@ -10,8 +10,8 @@ body{
     background-color:  hsl(30, 38%, 92%);
 }
 #card{
-    width:670px;
-    height: 500px;
+    width:650px;
+    min-height: 500px;
     border-radius: 10px;
     display: flex;
     overflow: hidden;
@@ -21,6 +21,7 @@ body{
     width:100%;
     height:contain;
     float: left;
+
 }
 img{
     height:100%;
@@ -34,6 +35,10 @@ h1{
 }
 .subtitle{
     font-weight: 500;
+    line-height: 20px;
+}
+.heading-subtitle{
+    letter-spacing: 3px;
 }
 p{
     font-size: 14px;
@@ -74,4 +79,23 @@ ul, li{
     margin:0 ;
     display: inline-block;
     font-family: 'Fraunces', serif;
+}
+@media screen and (max-width:400px) {
+    .img-box{
+        float:none;
+        height:30%;
+    }
+
+    #card{
+        display: block;
+        width:350px;
+        /* min-height: 500px; */
+    }
+    .left-content{
+        width:fit-content;
+        padding:20px ;
+    }
+    button{
+        width:100%;
+    }
 }
